@@ -32,9 +32,11 @@ class ShoesController < ApplicationController
     end
 
     get '/shoes/:id' do
+      erb :'/shoes/show'
     end
 
     get '/shoes/:id/edit' do
+      erb :'/shoes/edit'
         
     end
 
