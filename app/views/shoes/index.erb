@@ -1,17 +1,16 @@
 
 <p>Welcome, <b><%= @current_user.username%></b>!</p>
 
-<h1>My Expenses</h1>
+<h1>My Shoes</h1>
 <br>
-<ul>
+<ol>
     <% @shoes.each do |shoe|%>
-            
-                <li><a href="/shoes/<%= shoe.id %>">
-        <% end %>
-        <a href="/shoes/new">Add a new shoe!</a>
-        <p>You don't have any shoes to track! <a href="/shoes/new">Create a new shoe to track here</a>.</p>
-    
-</ul>
+        <li><a href="/shoes/<%= shoe.id %>"><%= shoe.name %></li></a>
+    <% end %>
+</ol>
+    <br>
+        <p>You don't have any shoes to track! Click <a href="/shoes/new">here</a> to create a new shoe.</p>
+
 <!--
 #<Shoe:0x00007ff10c3fbf10
   id: 7,
