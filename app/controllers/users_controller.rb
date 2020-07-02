@@ -43,7 +43,7 @@ class UsersController < ApplicationController
       session.destroy
       redirect to('/')
     else
-      rediect to('/')
+      redirect to('/')
     end
   end
 

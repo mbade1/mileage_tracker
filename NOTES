@@ -1,0 +1,24 @@
+JULY 3:
+
+RECORD YOURSELF ON SOME OF THIS!!!
+
+CONTROLLERS
+    Application_controller DONE
+    shoes_controller: Complete get '/shoes/:id', get '/shoes/:id/edit', patch '/shoes/:id', and delete '/shoes/:id/delete'
+    users_controller: DONE
+
+MODELS:
+    both models DONE
+
+VIEWS:
+    /users = DONE
+    /shoes = corresponding shoes_controller pages interact with this
+    NAV BAR ON ALL PAGES!!! - make once, then embed it in the header on every page!!!
+
+Add the Flash message bonus in the project requirement
+
+
+Check ALL requirements and make sure everything is good to go!!! :)
+
+
+
