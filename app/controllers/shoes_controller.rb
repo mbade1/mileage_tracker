@@ -63,7 +63,6 @@ class ShoesController < ApplicationController
       end
     end
 
-
     delete '/shoes/:id/delete' do
       @shoe = Shoe.find(params[:id])
       if logged_in? && @shoe.user == current_user

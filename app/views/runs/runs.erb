@@ -1,1 +1,26 @@
-SIMILAR TO EDIT PAGE, EXCEPT ONLY MILEAGE CAN BE UPDATED
+<h1>Update Mileage for: <u><%= @shoe.name %></u></h1>
+<br>
+<form action="/runs/<%= @shoe.id %>" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="PATCH">    
+
+  <strong> 
+  Name of Shoes:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= @shoe.name %>
+  <br><br>
+
+  Date of Purchase:&nbsp;&nbsp; <%= @shoe.date %>
+  <br><br>
+
+  Max Shoe Mileage:&nbsp;&nbsp;<%= @shoe.new_mileage %>
+  <br><br>
+
+  Current Mileage:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= @shoe.current_mileage %>
+  <br><br>
+
+  <label for="latest_run">Latest Run:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <input type="text" name="latest_run" id="latest_run">&nbsp; Miles
+    
+
+  <br><br>
+  </strong>
+  <input type="submit" value="Update Mileage">
+</form>
