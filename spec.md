@@ -19,6 +19,7 @@ Specs:
 - [x] Include user input validations
     - Shoe class validates all params
 - [ ] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
+    - Login/Sign up pages will include this.
 - [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
 Confirm
