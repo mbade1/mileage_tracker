@@ -5,13 +5,12 @@
 <strong>Current Mileage: <%= @shoe.current_mileage %></strong><br><br>
 <strong>Price of Shoes: $<%= @shoe.price %></strong><br><br>
 
-<a href="/shoes/<%= @shoe.id %>/edit">Edit Shoe</a>
-<br><br>
+<br>
 
 <!--DELETE FORM -->
 
+<p> Click <strong><a href="/shoes/<%= @shoe.id %>/edit">here</a></strong> to <em>Edit</em> or <em>Delete</em> information on your shoe.</p>
 <p>Click <strong><a href="/shoes/<%= @shoe.id %>/runs">here</a></strong>  to <em>Update</em> the current mileage on your shoe.</p>
-<p> Click <strong><a href="/shoes/<%= @shoe.id %>/edit">here</a></strong> to <em>Edit</em> information on your shoe.</p>
 
 
   

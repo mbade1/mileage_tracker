@@ -65,7 +65,10 @@ class ShoesController < ApplicationController
 
 
     delete '/shoes/:id/delete' do
-        
+      @shoe = Shoe.find(params[:id])
+      @shoe.destroy
+      binding.pry
+      redirect to('/shoes')
     end
 
 end

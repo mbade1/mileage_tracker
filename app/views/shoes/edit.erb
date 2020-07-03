@@ -25,10 +25,14 @@
     <input type="text" name="price" id="price" value="<%= @shoe.price %>">
     <br><br>
     </strong>
-    <input type="submit" value="Edit Your Shoe!">
+    <input type="submit" value="Edit Your Shoes">
 
 </form>
-
+<br>
+<form action="/shoes/<%= @shoe.id %>/delete" method="POST">
+    <input type="hidden" id="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Shoes">
+</form>
 <p>Don't want to edit? No problem! To view all of your shoes, click <a href="/shoes">here!</a></p>
 
 
