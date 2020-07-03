@@ -11,11 +11,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-    if logged_in?
-      redirect to('/shoes')
-    else
       erb :welcome
-    end
   end
 
   helpers do

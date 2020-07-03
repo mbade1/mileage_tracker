@@ -11,6 +11,18 @@
     width: 100%;
   }
 
+  * a:link {
+    color: blue;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  *a:visited {
+    color: blue;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
   /* --- Welcome Page Styles --- */
   body {
     background-color: rgb(216, 89, 72);
@@ -58,8 +70,10 @@
 
   p {
     margin-bottom: 18px;
-    text-align: center;
+    text-align: left;
   }
+  
+  
 
   .main {
     overflow: hidden;
