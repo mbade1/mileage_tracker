@@ -66,9 +66,12 @@ class ShoesController < ApplicationController
 
     delete '/shoes/:id/delete' do
       @shoe = Shoe.find(params[:id])
-      @shoe.destroy
-      binding.pry
-      redirect to('/shoes')
+      if logged_in? && @shoe.user == current_user
+        @shoe.destroy
+        redirect to('/shoes')
+      else
+        redirect to('/login')
+      end
     end
 
 end
