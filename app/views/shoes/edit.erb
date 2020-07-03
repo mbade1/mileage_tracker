@@ -1,4 +1,4 @@
-<h1>Edit <u><%= @shoe.name %></u> Information:</h1>
+<h1><u><%= @shoe.name %></u> Information:</h1>
 <br>
 
 <form action="/shoes/<%= @shoe.id %>" method="POST">
@@ -34,9 +34,8 @@
   <input type="submit" value="Delete Shoes">
 </form>
 <br>
-<p>Don't want to edit? No problem! To view all of your shoes, click <a href="/shoes">here!</a></p>
+<p>Don't want to edit? No problem! To view all of your shoes, click <strong><a href="/shoes">here!</a></strong></p>
 <br>
-<p><strong><a href="/logout">logout</a></strong></p>
 
 
 

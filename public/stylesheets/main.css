@@ -11,18 +11,6 @@
     width: 100%;
   }
 
-  * a:link {
-    color: blue;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-
-  *a:visited {
-    color: blue;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-
   /* --- Welcome Page Styles --- */
   body {
     background-color: rgb(216, 89, 72);
@@ -73,8 +61,6 @@
     text-align: left;
   }
   
-  
-
   .main {
     overflow: hidden;
   }
@@ -94,8 +80,11 @@
   }
 }
 
-iframe {
+iframe.gif {
   position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (max-width: 600px) {
