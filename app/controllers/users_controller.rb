@@ -40,7 +40,7 @@ class UsersController < ApplicationController
     if logged_in?
       @user = current_user
       @user = nil
-      session.destroy
+      session.clear
       redirect to('/')
     else
       redirect to('/')
