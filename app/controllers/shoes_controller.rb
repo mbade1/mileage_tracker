@@ -20,7 +20,7 @@ class ShoesController < ApplicationController
 
     post '/shoes' do
         if logged_in?
-            @shoe = current_user.shoes.build(params)
+          @shoe = current_user.shoes.build(params)
             if !@shoe.save
               erb :'/shoes/create_shoe'
             else

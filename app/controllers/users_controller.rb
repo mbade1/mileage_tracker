@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     if !session[:user_id]
       erb :'users/login'
     else
-      redirect to('/shoes/index')
+      redirect to('/shoes')
     end
   end
 
