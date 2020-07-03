@@ -1,35 +1,9 @@
-JULY 3:
-
-RECORD YOURSELF ON SOME OF THIS!!!
+JULY 4:
 
 CONTROLLERS
-    Application_controller DONE
-    shoes_controller: Complete:
-         get '/shoes/:id'
-         get '/shoes/:id/edit'
-         patch '/shoes/:id'
-         delete '/shoes/:id/delete'
-
-    OPTIONAL:
-        get '/shoes/:id/run' - user inputs run mileage and it updates the mileage on each run.
-        post '/shoes/:id/run' - once updated, it displays that specific shoe, with the updated mileage on the shoe.
-    
-
-    users_controller: DONE
-
-MODELS:
-    both models DONE
-
-VIEWS:
-    /users = DONE
-    /shoes = corresponding shoes_controller pages interact with this
-    NAV BAR ON ALL PAGES!!! - make once, then embed it in the header on every page!!!
+    Login and Sign Up Cookies are persisting, even after clearing...
 
 Add the Flash message bonus in the project requirement
 
-
 Check ALL requirements and make sure everything is good to go!!! :)
 
-
-
-NAV BAR??
