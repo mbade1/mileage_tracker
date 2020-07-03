@@ -1,1 +1,35 @@
-Edit Shoe Information here
+<h1>Edit Shoes: <u><%= @shoe.name %></u></h1>
+
+<br>
+<form action="/shoes/<%= @shoe.id %>" method="POST">
+    <input id="hidden" type="hidden" name="_method" value="PATCH">    <strong>
+    <label for="name">Name of Shoes:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+    <input type="text" name="name" id="name" value="<%= @shoe.name %>">
+    <br><br>
+
+    <label for="date">Date of Purchase:&nbsp;&nbsp;</label>
+    <input type="date" name="date" id="date" value="<%= @shoe.date %>">
+    <br><br>
+
+    <label for="new_mileage">Max Shoe Mileage:&nbsp;</label>
+    <input type="text" name="new_mileage" id="new_mileage" value="<%= @shoe.new_mileage %>">
+    <br><br>
+
+    <label for="current_mileage">Current Mileage:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="text" name="current_mileage" id="current_mileage" value="<%= @shoe.current_mileage %>">
+    <br><em style="font-size:0.7em;">(if shoes are new, type in 0)</em>
+
+    <br><br>
+
+    <label for="price">Price of Shoes: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$</label>
+    <input type="text" name="price" id="price" value="<%= @shoe.price %>">
+    <br><br>
+    </strong>
+    <input type="submit" value="Edit Your Shoe!">
+
+</form>
+
+<p>Don't want to edit? No problem! To view all of your shoes, click <a href="/shoes">here!</a></p>
+
+
+

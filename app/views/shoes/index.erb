@@ -4,19 +4,17 @@
 <h1>My Shoes</h1>
 <br>
 <ol>
-    <% @shoes.each do |shoe|%>
-        <li><a href="/shoes/<%= shoe.id %>"><%= shoe.name %></li></a>
+    <% if @shoes.size > 0 %>
+        
+        <% @shoes.each_with_index do |shoe, index|%>
+            <h3><%= index + 1 %>. &nbsp;<a href="/shoes/<%= shoe.id %>"><%= shoe.name %></a></h3>
+        <% end %>
+        
+    <% else %>
+        <p>You don't have any shoes to track! Click <a href="/shoes/new">here</a> to create a new shoe.</p>
+    <% end %>
+    <br>
+    <% if @shoes.size > 0 %>
+        <p>Click <a href="/shoes/new">here</a> to add a new shoe.</p>
     <% end %>
 </ol>
-    <br>
-        <p>You don't have any shoes to track! Click <a href="/shoes/new">here</a> to create a new shoe.</p>
-
-<!--
-#<Shoe:0x00007ff10c3fbf10
-  id: 7,
-  name: "Earth Runners",
-  date: Fri, 01 May 2020,
-  new_mileage: 7000,
-  current_mileage: 6000,
-  price: 0.5099e2,
-  user_id: 3>, -->

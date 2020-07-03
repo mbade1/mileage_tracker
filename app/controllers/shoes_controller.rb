@@ -32,20 +32,44 @@ class ShoesController < ApplicationController
     end
 
     get '/shoes/:id' do
-      erb :'/shoes/show'
+      @shoe = Shoe.find(params[:id])
+      if logged_in? && @shoe.user == current_user
+        erb :'shoes/show'
+      else
+        redirect to('/login')
+      end
     end
 
     get '/shoes/:id/edit' do
-      erb :'/shoes/edit'
-        
+      @shoe = Shoe.find(params[:id])
+      if logged_in? && @shoe.user == current_user
+        erb :'/shoes/edit'
+      else
+        redirect to('/login')
+      end        
     end
 
     patch '/shoes/:id' do
-        
+      @shoe = Shoe.find(params[:id])
+      @shoe.name = params[:name]
+      @shoe.date = params[:date]
+      @shoe.new_mileage = params[:new_mileage]
+      @shoe.current_mileage = params[:current_mileage]
+      @shoe.price = params[:price] 
+      if !@shoe.save
+        erb :'/shoes/edit'
+      else
+        redirect to("/shoes/#{@shoe.id}")
+      end
     end
+
 
     delete '/shoes/:id/delete' do
         
     end
 
 end
+
+
+
+

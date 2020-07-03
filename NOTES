@@ -4,7 +4,17 @@ RECORD YOURSELF ON SOME OF THIS!!!
 
 CONTROLLERS
     Application_controller DONE
-    shoes_controller: Complete get '/shoes/:id', get '/shoes/:id/edit', patch '/shoes/:id', and delete '/shoes/:id/delete'
+    shoes_controller: Complete:
+         get '/shoes/:id'
+         get '/shoes/:id/edit'
+         patch '/shoes/:id'
+         delete '/shoes/:id/delete'
+
+    OPTIONAL:
+        get '/shoes/:id/run' - user inputs run mileage and it updates the mileage on each run.
+        post '/shoes/:id/run' - once updated, it displays that specific shoe, with the updated mileage on the shoe.
+    
+
     users_controller: DONE
 
 MODELS:
