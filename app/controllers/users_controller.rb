@@ -1,4 +1,7 @@
+require 'rack-flash'
+
 class UsersController < ApplicationController
+  use Rack::Flash
 
   get '/signup' do
     if !session[:user_id]
@@ -11,6 +14,7 @@ class UsersController < ApplicationController
   post '/signup' do
     @user = User.new(params)
     if !@user.save
+      flash[:message] = "Please fill in all fields correctly."
       erb :'users/create_user'
     else
       session[:user_id] = @user.id
@@ -32,6 +36,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect to('/shoes')
     else
+      flash[:message] = "Please fill in all fields correctly."
       erb :'users/login'
     end
   end

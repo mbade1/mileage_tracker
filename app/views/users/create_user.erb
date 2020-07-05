@@ -1,5 +1,8 @@
 <h1>Sign up to start tracking your miles!</h1>
 <br>
+<% if flash.has?(:message) %>
+  <p style="color:red"><%= flash[:message] %></p>
+<% end %>
 
 <form action="/signup" method="POST">
   <label for="username">Username:</label>

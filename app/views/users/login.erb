@@ -1,5 +1,8 @@
 <h1>Log In to look at your mileage!</h1>
 <br>
+<% if flash.has?(:message) %>
+  <p style="color:red"><%= flash[:message] %></p>
+<% end %>
 <form action="/login" method="POST">
     <label for="username">Username:</label>
     <input type="text" name="username" id="username">
