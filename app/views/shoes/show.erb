@@ -6,9 +6,9 @@
 <strong>Price of Shoes: $<%= @shoe.price %></strong><br><br>
 
 <h3 style="color: red; text-align: center;">
-    <% if  @shoe.new_mileage <= @shoe.current_mileage %>
-        <%= "TIME TO BUY NEW SHOES!"%><br>
-    <% end %>
+  <% if  @shoe.new_mileage <= @shoe.current_mileage %>
+    <%= "TIME TO BUY NEW SHOES!"%><br>
+  <% end %>
 </h3>
 
 <p><strong><a href="/shoes/<%= @shoe.id %>/edit">Edit or Delete</a> information</strong> about your shoes.</p>
@@ -16,7 +16,3 @@
 <p><strong><a href="/shoes">View All Shoes</a></strong> 
 <br>
 <p><strong><a href="/logout">logout</a></strong></p>
-
-
-
-  

@@ -2,21 +2,19 @@
 <br>
 <form action="/runs/<%= @shoe.id %>" method="POST">
   <input id="hidden" type="hidden" name="_method" value="PATCH">    
-  <strong> 
-  
-  Date of Purchase:&nbsp;&nbsp; <%= @shoe.date %>
-  <br><br>
-  Max Shoe Mileage:&nbsp;&nbsp;<%= @shoe.new_mileage %>
-  <br><br>
-  Current Mileage:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= @shoe.current_mileage %>
-  <br><br>
-  <label for="latest_run">Latest Run:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-  <input type="text" name="latest_run" id="latest_run">&nbsp; Miles
-  <br><br>
-  </strong>
+    <strong> 
+      Date of Purchase:&nbsp;&nbsp; <%= @shoe.date %>
+    <br><br>
+      Max Shoe Mileage:&nbsp;&nbsp;<%= @shoe.new_mileage %>
+    <br><br>
+      Current Mileage:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= @shoe.current_mileage %>
+    <br><br>
+      <label for="latest_run">Latest Run:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type="text" name="latest_run" id="latest_run">&nbsp; Miles
+    <br><br>
+    </strong>
   <input type="submit" value="Add Mileage">
 </form>
-
 <br>
 <p><strong><a href="/shoes/<%= @shoe.id %>/edit">Edit or Delete</a> information</strong> about your shoes.</p>
 <p><strong><a href="/shoes">View All Shoes</a></strong> 
