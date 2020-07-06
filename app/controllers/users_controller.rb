@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   get '/signup' do
     if !session[:user_id]
-      erb :'users/create_user'
+      erb :'users/signup'
     else
       redirect to('/shoes')
     end
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     @user = User.new(params)
     if !@user.save
       flash[:message] = "Please fill in all fields correctly."
-      erb :'users/create_user'
+      erb :'users/signup'
     else
       session[:user_id] = @user.id
       redirect to('/shoes')
