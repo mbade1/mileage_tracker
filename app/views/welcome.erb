@@ -1,8 +1,12 @@
 <div class="container">
-  <header><p><iframe class="gif" src="https://giphy.com/embed/wdjCHcc0BcUSs" width="300" height="245" frameBorder="0" class="giphy-embed"></iframe></p>
-  
+  <header>
+    <% if flash.has?(:message) %>
+      <p style="color:red; font-size: 1.2em;"><strong><%= flash[:message] %></strong></p>
+    <% end %>
+    <p><iframe class="gif" src="https://giphy.com/embed/wdjCHcc0BcUSs" width="300" height="245" frameBorder="0" class="giphy-embed"></iframe></p>
   </header>
   <div class="col-md-8 col-md-offset-2">
+    
     <h2>Welcome to the Mileage Tracker!</h2>
 
     <div class="content">

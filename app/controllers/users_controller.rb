@@ -46,6 +46,7 @@ class UsersController < ApplicationController
       @user = current_user
       @user = nil
       session.destroy
+      flash[:message] = "Logout successful. See you after your next run!"
       redirect to('/')
     else
       redirect to('/')
