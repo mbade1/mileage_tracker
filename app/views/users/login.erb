@@ -1,17 +1,20 @@
 <h1>Log In to look at your mileage!</h1>
 <br>
+
 <% if flash.has?(:message) %>
   <p style="color:red"><%= flash[:message] %></p>
 <% end %>
-<form action="/login" method="POST">
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username">
-    <br><br>
-    <label for="password">Password:&nbsp;</label>
-    <input type="password" name="password" id="password">
-    <br><br>
-    <input type="submit" value="Log In">
-</form>
 
+<form action="/login" method="POST">
+  <label for="username">Username:</label>
+  <input type="text" name="username" id="username">
+  <br><br>
+  
+  <label for="password">Password:&nbsp;</label>
+  <input type="password" name="password" id="password">
+  <br><br>
+    
+  <input type="submit" value="Log In">
+</form>
 <br>
 To return home, click <a href="/"><strong>here<strong></a>.

@@ -6,6 +6,7 @@
 <% if flash.has?(:message) %>
   <p style="color:red"><%= flash[:message] %></p>
 <% end %>
+
 <% if @shoes.size > 0 %>        
     <% @shoes.each_with_index do |shoe, index|%>
         <h3><%= index + 1 %>. &nbsp;<a href="/shoes/<%= shoe.id %>"><%= shoe.name %></a></h3>
@@ -14,9 +15,11 @@
     <p>You don't have any shoes to track! Click <a href="/shoes/new">here</a> to create a new shoe.</p>
 <% end %>
 <br>
+
 <% if @shoes.size > 0 %>
     <p style="text-align: center;">Click <strong><a href="/shoes/new">here</a></strong> to add a new pair of shoes.</p>
 <% end %>
+
 <strong><a href="/logout">logout</a></strong><br><br>
 
 

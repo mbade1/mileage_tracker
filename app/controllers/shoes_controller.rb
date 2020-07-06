@@ -15,7 +15,7 @@ class ShoesController < ApplicationController
     get '/shoes/new' do
         if logged_in?
           @current_user
-          erb :'shoes/create_shoe'
+          erb :'shoes/new'
         else
           redirect to('/login')
         end
@@ -25,7 +25,7 @@ class ShoesController < ApplicationController
         if logged_in?
           @shoe = current_user.shoes.build(params)
             if !@shoe.save
-              erb :'/shoes/create_shoe'
+              erb :'/shoes/new'
             else
               flash[:message] = "A new pair of shoes have been added!"
               redirect to('/shoes')
