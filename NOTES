@@ -1,18 +1,5 @@
-JULY 5:
+Create BLOG and Video Walk through
+README:
+    - blog link, video link under first section; heroku links under ##Install Instructions
 
-UPDATE README AND FINALIZE!!!
-
-Check ALL requirements and make sure everything is good to go!!! :)
-
-
-
-
-For added security when cloning the repo, generate your own session secret:
-
-1. Comment out the current session_secret in the Application Controller and un-comment the ENV.fetch('SESSION_SECRET').
-2. Create a new .env file by running touch .env in your terminal
-3. Use the session_secret_generator gem, included in this project's Gemfile, by running generate_secret in the terminal.
-4. Copy the secret from your terminal output and paste into your .env file locally. It should look something like this in your .env file:
-        SESSION_SECRET=8ad90be1a5a9aaaf04a0a99d8efb42c825f16b8fef603f65b600c91d66a17bdd520099130ed70669409a524a97c8f62e9434a0ad102624f9bcff0832e3c2f568
-
-    NOTE Don't use this secret!!! The secret you use should be kept private and out of version control or anywhere else publicly accessible.
+Check ALL requirements and SUBMIT
