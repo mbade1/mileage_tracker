@@ -9,7 +9,7 @@ This app could be used for:
 
 This project was created as part of the [Flatiron School's Online Web Developer program](https://flatironschool.com/).
 
-For more information about how the project was created, visit [my blog] and watch the demo video at [demo video].
+For more information about how the project was created, visit [my blog](https://mbade1.github.io/sinatra_project_mileage_tracker) and watch the demo video at [demo video](https://www.youtube.com/watch?v=uQ37erBjvHI&list=PLUv_cs_etiP46tkJnQF7_7bPXbliRTsTt&index=3&t=0s).
 
 ## Install Instructions
 
