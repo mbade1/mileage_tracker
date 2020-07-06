@@ -1,4 +1,7 @@
+require 'rack-flash'
+
 class ShoesController < ApplicationController
+  use Rack::Flash
 
     get '/shoes' do
         if logged_in?
@@ -24,6 +27,7 @@ class ShoesController < ApplicationController
             if !@shoe.save
               erb :'/shoes/create_shoe'
             else
+              flash[:message] = "A new pair of shoes have been added!"
               redirect to('/shoes')
             end
           else
