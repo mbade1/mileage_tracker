@@ -7,7 +7,7 @@ This app could be used for:
 * An advertising/marketing tool for running shoe companies (When a user reaches their maximum mileage, an alert is sent to the user to buy new shoes). 
 * Saving user-created names of shoes, and tracking the mileage of their shoes.
 
-This project was created as part of the [Flatiron School's Online Web Developer program](https://flatiron-school.com).
+This project was created as part of the [Flatiron School's Online Web Developer program](https://flatironschool.com/).
 
 For more information about how the project was created, visit [my blog] and watch the demo video at [demo video].
 
