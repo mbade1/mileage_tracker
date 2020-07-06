@@ -13,9 +13,15 @@ For more information about how the project was created, visit [my blog] and watc
 
 ## Install Instructions
 
-Visit [Sinatra Mileage Tracker](LINK TO HEROKU...) to begin using the app.
+Visit [Sinatra Mileage Tracker](LINK TO HEROKU...) to immediately begin using the app.
 
-Alternatively, clone this repo, run `bundle install`, `rake db:migrate`, and then run `shotgun`.
+Otherwise, here is another way to see it in action: 
+- download or clone this project
+- cd into the mileage-tracker directory
+- run `bundle install` in your console
+- run `db:migrate`
+- run `shotgun`
+- open your favorite browser and enter the given local url provided by the shotgun server!
 
 If you'd like to learn more about securing and deploying heroku apps, visit the [Sinatra Heroku Demo App](LINK TO HEROKU...).
 
