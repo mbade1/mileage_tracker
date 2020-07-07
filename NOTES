@@ -1,4 +1,19 @@
 README:
     - heroku links under ##Install Instructions
 
-Check ALL requirements and SUBMIT
+Adding another component: RUNS 
+    - TABLE RUNS:
+        - :shoe_id, :date, :miles_run, :location, :current_mileage?
+    - MODELS:
+        - runs belong_to shoes, and shoe has_many runs
+        Run model specs:
+            - validates :shoe_id, :date, :miles_run, :location
+    - CONTROLLERSS:
+        - gets '/shoes/:id'
+            - @runs = current_user.runs
+            -(IN VIEWS) display run log in a table by iterating .each_with_index over runs. This will display:
+                Date of Run     Miles Run       Location        Current Mileage (@newest_run = (@shoe.current_mileage.to_i + @shoe.latest_run.to_i))
+        - get '/shoes/:id/runs'
+            - take away date of purchase, max shoe mileage.
+            - form inputs for date of run, miles run, location, and show current mileage
+            

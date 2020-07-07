@@ -11,6 +11,9 @@
   <% end %>
 </h3>
 
+<!-- Information about runs - use same shoe iteration that was used in erb:index, for runs  -->
+<!-- IN VIEWS) display run log in a table by iterating .each_with_index over runs. 
+This will display: Date of Run     Miles Run       Location        Current Mileage (@newest_run = (@shoe.current_mileage.to_i + @shoe.latest_run.to_i))-->
 <p><strong><a href="/shoes/<%= @shoe.id %>/edit">Edit or Delete</a> information</strong> about your shoes.</p>
 <p><strong><a href="/shoes/<%= @shoe.id %>/runs">Update</a> the current mileage</strong> on your shoes.</p>
 <p><strong><a href="/shoes">View All Shoes</a></strong> 
