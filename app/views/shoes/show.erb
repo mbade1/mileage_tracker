@@ -1,9 +1,13 @@
 <u><h1><%= @shoe.name %></h1></u><br>
 
-<strong>Date of Purchase:</strong> <%= @shoe.date %>&nbsp;&nbsp;&nbsp;&nbsp;
-<strong>Max Shoe Mileage:</strong> <%= @shoe.new_mileage %> miles<br><br>
-<strong>Current Mileage:</strong> <%= @shoe.current_mileage %> miles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<strong>Price of Shoes:</strong> $<%= @shoe.price %><br><br>
+<strong>Date of Purchase:</strong> <%= @shoe.date %>
+<br><br>
+<strong>Max Shoe Mileage:</strong> <%= @shoe.new_mileage %> miles
+<br><br>
+<strong>Current Mileage:</strong> <%= @shoe.current_mileage %> miles
+<br><br>
+<strong>Price of Shoes:</strong> $<%= @shoe.price %>
+<br><br>
 
 <h3 style="color: red; text-align: center;">
   <% if  @shoe.new_mileage <= @shoe.current_mileage %>
@@ -11,30 +15,6 @@
   <% end %>
 </h3>
 <br>
-<u><h1>Running Log</h1></u>
-
-<% if @runs.size > 0 %>
-  <table style="border: 1px solid black;"><br>       
-    <tr>
-      <th>Date of Run</th>
-      <th>Miles Run</th>
-      <th>Location of Run</th>
-    </tr>
-    <% @runs.each do |run|%> 
-        <tr>
-          <td><%= run.date %></td>
-          <td><%= run.miles_run %></td>
-          <td><%= run.location %></td>
-        </tr>
-    <% end %>
-  </table>
-<% else %>
-  <p>You don't have any runs to track! Click <strong><a href="/shoes/<%= @shoe.id %>/runs">here</a> to create a new run.</p>
-<% end %>
-<br>
-<!-- Information about runs - use same shoe iteration that was used in erb:index, for runs  -->
-<!-- IN VIEWS) display run log in a table by iterating .each_with_index over runs. 
-This will display: Date of Run     Miles Run       Location        Current Mileage (@newest_run = (@shoe.current_mileage.to_i + @shoe.latest_run.to_i))-->
 <p><strong><a href="/shoes/<%= @shoe.id %>/edit">Edit or Delete</a> information</strong> about your shoes.</p>
 <p><strong><a href="/shoes/<%= @shoe.id %>/runs">Update</a> the current mileage</strong> on your shoes.</p>
 <p><strong><a href="/shoes">View All Shoes</a></strong> 

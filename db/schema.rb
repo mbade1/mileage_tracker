@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200708142633) do
-
-  create_table "runs", force: :cascade do |t|
-    t.integer "miles_run"
-    t.date    "date"
-    t.string  "location"
-    t.integer "shoe_id"
-  end
+ActiveRecord::Schema.define(version: 20200702152435) do
 
   create_table "shoes", force: :cascade do |t|
     t.string  "name"

@@ -37,7 +37,6 @@ class ShoesController < ApplicationController
 
   get '/shoes/:id' do
     @shoe = Shoe.find(params[:id])
-    @runs = @shoe.runs
     if logged_in? && @shoe.user == current_user
       erb :'shoes/show'
     else
