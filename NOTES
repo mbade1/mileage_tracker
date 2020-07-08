@@ -2,13 +2,13 @@ README:
     - heroku links under ##Install Instructions
 
 Adding another component: RUNS 
-    - TABLE RUNS:
-        - :shoe_id, :date, :miles_run, :location, :current_mileage?
-    - MODELS:
+    - TABLE RUNS:   DONE    
+        - :shoe_id, :date, :miles_run, :location
+    - MODELS:   DONE
         - runs belong_to shoes, and shoe has_many runs
         Run model specs:
             - validates :shoe_id, :date, :miles_run, :location
-    - CONTROLLERSS:
+    - CONTROLLERS:
         - gets '/shoes/:id'
             - @runs = current_user.runs
             -(IN VIEWS) display run log in a table by iterating .each_with_index over runs. This will display:

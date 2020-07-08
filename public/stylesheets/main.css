@@ -11,6 +11,8 @@
     width: 100%;
   }
 
+
+
   /* --- Welcome Page Styles --- */
   body {
     background-color: rgb(216, 89, 72);
@@ -18,6 +20,8 @@
     font-family: Sans-Serif;
     line-height: 18px;
   }
+
+
 
   header {
     text-align: center;
