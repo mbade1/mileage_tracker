@@ -8,8 +8,6 @@ users.each do |user|
     User.create(user)
 end
 
-
-
 shoes = [
     {name: "Nike All Stars", date: "2020-01-01", new_mileage: 500, current_mileage: 450, latest_run: 0, price: 79.99, user_id: 1},
     {name: "Hoka Green", date: "2020-03-19", new_mileage: 400, current_mileage: 40, latest_run: 0, price: 129.99, user_id: 1},
@@ -26,6 +24,15 @@ shoes.each do |shoe|
     Shoe.create(shoe)
 end
 
+runs = [
+    {miles_run: 10, date: "2020-05-05", location: "Neighborhood", shoe_id: 1},
+    {miles_run: 5, date: "2020-05-06", location: "Central Park", shoe_id: 1},
+    {miles_run: 10, date: "2020-05-07", location: "Mountains", shoe_id: 1},
+    {miles_run: 3, date: "2020-05-07", location: "Block", shoe_id: 2},
+    {miles_run: 2, date: "2020-05-08", location: "Track", shoe_id: 2},
 
+]
 
-
+runs.each do |run|
+    Run.create(run)
+end
