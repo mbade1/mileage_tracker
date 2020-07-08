@@ -3,7 +3,7 @@
 <h2>My Shoes</h2>
 <br>
 <% if flash.has?(:message) %>
-  <p style="color:red"><%= flash[:message] %></p>
+  <p style="color:red"><strong><%= flash[:message] %></strong></p>
 <% end %>
 
 <% if @shoes.size > 0 %>        
