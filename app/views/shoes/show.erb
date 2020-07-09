@@ -24,14 +24,12 @@
       <th>Date of Run</th>
       <th>Miles Run</th>
       <th>Location of Run</th>
-      <th>Mileage after Run</th>
     </tr>
     <% @runs.each do |run|%> 
         <tr>
           <td><%= run.date%></td>
           <td><%= run.miles_run %></td>
           <td><%= run.location %></td>
-          <td><%= @shoe.current_mileage + run.miles_run %>
         </tr>
       <% end %>
     </table>
