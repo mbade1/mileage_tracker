@@ -24,3 +24,15 @@ shoes.each do |shoe|
     Shoe.create(shoe)
 end
 
+runs = [
+    {miles_run: 10, date: "2020-05-05", location: "Neighborhood", shoe_id: 1},
+    {miles_run: 5, date: "2020-05-06", location: "Central Park", shoe_id: 1},
+    {miles_run: 10, date: "2020-05-07", location: "Mountains", shoe_id: 1},
+    {miles_run: 3, date: "2020-05-07", location: "Block", shoe_id: 2},
+    {miles_run: 2, date: "2020-05-08", location: "Track", shoe_id: 2},
+
+]
+
+runs.each do |run|
+    Run.create(run)
+end

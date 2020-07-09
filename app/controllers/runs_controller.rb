@@ -5,15 +5,21 @@ class RunsController < ApplicationController
     erb :'runs/runs'
   end
 
-  patch '/runs/:id' do
+  post '/shoes/:id' do
     @shoe = Shoe.find(params[:id])
-    @shoe.latest_run = params[:latest_run]
-    @newest_run = (@shoe.current_mileage.to_i + @shoe.latest_run.to_i)
-    @shoe.current_mileage = @newest_run
-    if !@shoe.save
-      erb :'runs/runs'
-    else
+    @runs = Run.create
+    @runs.date = params[:date]
+    @runs.location = params[:location]
+    @runs.miles_run = params[:miles_run]
+    @runs.shoe_id = @shoe.id
+    if logged_in?
+      @newest_run = (@shoe.current_mileage.to_i + @runs.miles_run.to_i)
+      @shoe.current_mileage = @newest_run
+      @runs.save
+      flash[:message] = "A new run has been added!"
       redirect to("/shoes/#{@shoe.id}")
+    else
+      redirect to("/login")
     end
   end
 end
