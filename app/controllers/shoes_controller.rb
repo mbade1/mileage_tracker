@@ -28,7 +28,7 @@ class ShoesController < ApplicationController
         erb :'/shoes/new'
       else
         flash[:message] = "A new pair of shoes have been added!"
-        redirect to('/shoes')
+        redirect to("/shoes/#{@shoe.id}")
       end
     else
       redirect to('/login')
