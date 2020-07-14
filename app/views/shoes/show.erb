@@ -40,10 +40,11 @@
 
 <% else %>
   <br>
-  <p>You don't have any runs to track! Click <strong><a href="/shoes/<%= @shoe.id %>/runs">here</a> to create a new run.</p>
+  <p>You don't have any runs to track! Click <strong><a href="/shoes/<%= @shoe.id %>/runs">here</a></strong> to create a new run.</p>
 <% end %>
 
 <% if @runs.present? %>
+<br>
   <h3 style="color: red; text-align: center;">
     <% if  @shoe.new_mileage <= @total %>
       <%= "TIME TO BUY NEW SHOES!"%><br>
@@ -51,9 +52,14 @@
   </h3>
 <% end %>
 
-<br>
+
 <p><strong><a href="/shoes/<%= @shoe.id %>/runs">Add a Run</strong></a>
-<p><strong><a href="/shoes/<%= @shoe.id %>/edit">Edit or Delete</a> information</strong> about your shoes.</p>
+<p><strong><a href="/shoes/<%= @shoe.id %>/edit">Edit</a> information</strong> about your shoes.</p>
+<form action="/shoes/<%= @shoe.id %>/delete" method="POST">
+  <input type="hidden" id="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete this pair of shoes">
+</form>
+<br>
 <p><strong><a href="/shoes">View All Shoes</a></strong> 
 <br>
 <p><strong><a href="/logout">logout</a></strong></p>

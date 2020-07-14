@@ -3,11 +3,11 @@
 
 <form action="/shoes/<%= @shoe.id %>" method="POST">
   <strong> 
+  <label for="location">Location of Run:</label>
+    <input type="text" name="location" id="location">
+  <br><br>
     <label for="date">Date of Run:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="date" name="date" id="date">  
-  <br><br>
-    <label for="location">Location of Run:</label>
-    <input type="text" name="location" id="location">
   <br><br>
     <label for="miles_run">Latest Run:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
     <input type="text" name="miles_run" id="miles_run">&nbsp; Miles

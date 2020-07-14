@@ -16,7 +16,7 @@ class RunsController < ApplicationController
       @newest_run = (@shoe.current_mileage.to_i + @runs.miles_run.to_i)
       @shoe.current_mileage = @newest_run
       @runs.save
-      flash[:message] = "A new run has been added!"
+      flash[:message] = "A NEW RUN HAS BEEN LOGGED"
       redirect to("/shoes/#{@shoe.id}")
     else
       redirect to("/login")
