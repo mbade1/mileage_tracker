@@ -7,6 +7,8 @@
 <strong>Purchase Date:</strong> <%= @shoe.date %>&nbsp;&nbsp;&nbsp;&nbsp;
 <strong>Max Shoe Mileage:</strong> <%= @shoe.new_mileage %> miles
 <br><br>
+
+<!-- Update Current Mileage -->
 <% if @runs.present? %>
   <strong>Current Mileage:</strong>
   <% @total = 0 %>
@@ -17,33 +19,32 @@
 <% else %>
   <strong>Current Mileage:</strong> <%= @shoe.current_mileage %> miles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <% end %>
-
 <strong>Price of Shoes:</strong> $<%= @shoe.price %>
-<br><br>
-<br>
+<br><br><br>
+
 <u><h1>Running Log</h1></u>
 <% if @runs.size > 0 %>
-  <table style="border: 1px solid black;"><br>       
+  <table><br>       
     <tr>
       <th>Date of Run</th>
       <th>Miles Run</th>
       <th>Location of Run</th>
     </tr>
     <% @runs.each do |run|%> 
-        <tr>
-          <td><%= run.date%></td>
-          <td><%= run.miles_run %></td>
-          <td><%= run.location %></td>
-        </tr>
-      <% end %>
-    </table>
-
+      <tr>
+        <td><%= run.date%></td>
+        <td><%= run.miles_run %></td>
+        <td><%= run.location %></td>
+      </tr>
+    <% end %>
+  </table>
 <% else %>
   <br>
   <p>You don't have any runs to track! Click <strong><a href="/shoes/<%= @shoe.id %>/runs">here</a></strong> to create a new run.</p>
 <% end %>
 
-<% if @runs.present? %>
+<!-- Mileage Flash Message -->
+<% if @runs.size > 0 %>
 <br>
   <h3 style="color: red; text-align: center;">
     <% if  @shoe.new_mileage <= @total %>
@@ -52,14 +53,13 @@
   </h3>
 <% end %>
 
-
 <p><strong><a href="/shoes/<%= @shoe.id %>/runs">Add a Run</strong></a>
-<p><strong><a href="/shoes/<%= @shoe.id %>/edit">Edit</a> information</strong> about your shoes.</p>
+<p><strong><a href="/shoes/<%= @shoe.id %>/edit">Edit your shoes</a></strong></p>
+<p><strong><a href="/shoes">View All Shoes</a></strong> 
+<br>
 <form action="/shoes/<%= @shoe.id %>/delete" method="POST">
   <input type="hidden" id="hidden" name="_method" value="DELETE">
   <input type="submit" value="Delete this pair of shoes">
 </form>
-<br>
-<p><strong><a href="/shoes">View All Shoes</a></strong> 
 <br>
 <p><strong><a href="/logout">logout</a></strong></p>
