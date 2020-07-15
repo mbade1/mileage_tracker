@@ -6,7 +6,8 @@ gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
 gem 'rake'
 gem 'require_all'
 gem 'require_relative'
-gem 'sqlite3', '~> 1.3.13'
+gem 'pg', '~> 0.18', :group => :production
+gem 'sqlite3', '~> 1.3.13', :group => :development
 gem 'thin'
 gem 'shotgun'
 gem 'pry'
