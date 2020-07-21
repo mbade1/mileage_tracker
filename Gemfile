@@ -14,6 +14,7 @@ gem 'bcrypt'
 gem 'tux'
 gem 'sinatra-session', '~> 1.0'
 gem 'rack-flash3'
+gem 'pg', '~> 0.18'
 
 group :test do
   gem 'rspec'
