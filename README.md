@@ -13,7 +13,7 @@ For more information about how the project was created, visit [my blog](https://
 
 ## Install Instructions
 
-Visit [Sinatra Mileage Tracker](LINK TO HEROKU...) to immediately begin using the app.
+Visit [Sinatra Mileage Tracker](https://running-mileage-tracker.herokuapp.com/) to immediately begin using the app.
 
 Otherwise, here is another way to see it in action: 
 - download or clone this project
@@ -23,7 +23,7 @@ Otherwise, here is another way to see it in action:
 - run `shotgun`
 - open your favorite browser and enter the given local url provided by the shotgun server!
 
-If you'd like to learn more about securing and deploying heroku apps, visit the [Sinatra Heroku Demo App](LINK TO HEROKU...).
+If you'd like to learn more about securing and deploying heroku apps, visit the [Sinatra Heroku Demo App](https://running-mileage-tracker.herokuapp.com/).
 
 ## Contributors Guide
 
