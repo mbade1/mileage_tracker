@@ -23,8 +23,6 @@ Otherwise, here is another way to see it in action:
 - run `shotgun`
 - open your favorite browser and enter the given local url provided by the shotgun server!
 
-If you'd like to learn more about securing and deploying heroku apps, visit the [Sinatra Heroku Demo App](https://running-mileage-tracker.herokuapp.com/).
-
 ## Contributors Guide
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/mbade1/mileage_tracker. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
